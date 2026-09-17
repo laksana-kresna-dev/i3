@@ -1,0 +1,69 @@
+# ---------------------------------------------------------------------------
+# Private keys & credentials — never push these to GitHub
+# ---------------------------------------------------------------------------
+
+# SSH private keys
+.ssh/
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+id_ecdsa
+id_ecdsa.*
+id_dsa
+id_dsa.*
+*.pem
+known_hosts
+
+# GPG / PGP keyring and secret keys
+.gnupg/
+private-keys-v1.d/
+*.gpg
+*secring*
+*.asc
+
+# Generic key/cert file extensions
+*.key
+*.p12
+*.pfx
+*.crt
+
+# age encryption keys
+*.age
+key.txt
+
+# Password managers / secret stores
+.password-store/
+.local/share/keyrings/
+
+# Cloud provider credentials
+.aws/
+.azure/
+.config/gcloud/
+kubeconfig
+.kube/config
+
+# Docker credentials (contains auth tokens)
+.docker/config.json
+
+# Generic secrets / environment files
+.env
+.env.*
+*.env
+.netrc
+*_token
+*_secret
+
+# Shell history (can contain pasted tokens/passwords)
+.bash_history
+.zsh_history
+.zsh_sessions/
+
+# ---------------------------------------------------------------------------
+# OS & editor noise
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
