@@ -1,4 +1,4 @@
-# i3wm-dotfiles
+# I3 Window Manager
 
 My personal [i3wm](https://i3wm.org/) configuration for Arch Linux.
 
