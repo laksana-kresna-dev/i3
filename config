@@ -10,6 +10,7 @@
 # inside config.d/) because nearly every included file depends on it, and
 # i3 requires a variable to be defined before it is used (§4.1, §4.16).
 set $mod Mod4
+set $term kitty
 
 include config.d/00-general.conf
 include config.d/10-startup.conf
