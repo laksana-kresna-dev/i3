@@ -51,8 +51,8 @@ stop_existing_instance() {
 start_xidlehook() {
     stop_existing_instance
 
-    # Set X11 DPMS timeouts (Standby, Suspend, Off in seconds)
-    xset dpms 300 900 1800
+    # Disable DPMS and screen blanking to prevent conflicts with xidlehook
+    xset -dpms s off
 
     log "INFO" "Starting xidlehook daemon..."
 
