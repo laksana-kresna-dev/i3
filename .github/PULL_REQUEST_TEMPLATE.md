@@ -4,33 +4,37 @@ Provide a brief summary of the changes made in this Pull Request.
 
 ## Type of Change
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Configuration update / Refactoring
-- [ ] Documentation update
+- [ ] **Bug fix** (non-breaking change which fixes an issue)
+- [ ] **New feature** (non-breaking change which adds functionality)
+- [ ] **Chore / Maintenance** (tooling, dependencies, repo cleanup, workspace setup)
+- [ ] **Configuration update / Refactoring** (modifying existing dotfiles, keybindings, module setups, or restructuring config files without adding new features)
+- [ ] **Documentation update** (adding, updating, or correcting README, inline comments, or guide documents)
 
 ## Related Issues
 
 <!--
 Use GitHub keywords to automatically close related issues upon merging.
-Examples:
-- For Bug fixes: Fixes #12
-- For Features: Closes #5
-- Multiple issues: Fixes #12, Closes #15
+Professional Conventions:
+- For Bug fixes: Fixes #12 or Resolves #12
+- For Features / Chores / Refactoring: Closes #5
+- Multiple issues: Closes #3, Fixes #12
 -->
 
 Closes #
 
 ## How Has This Been Tested?
 
-Please describe the tests you ran to verify your changes:
+The following general i3wm checks were performed to ensure system stability:
 
-- [ ] Validated i3 config syntax (`i3 -C`)
-- [ ] Tested keybindings and reload behavior locally
-- [ ] Checked compatibility with related bar/menu scripts
+- [ ] **Syntax Validation**: Checked i3 configuration syntax using `i3 -C`
+- [ ] **Config Reload**: Verified live config reload without errors using `$mod+Shift+r`
+- [ ] **Script Execution**: Confirmed shell scripts execute cleanly with correct permissions (`chmod +x`)
+- [ ] **Daemon Initialization**: Verified autostart daemons (e.g., compositor, wallpaper, lockers) spawn correctly on startup
+- [ ] _(Optional)_ Insert additional custom tests here...
 
 ## Checklist
 
 - [ ] My code follows the style guidelines of this repository.
 - [ ] I have performed a self-review of my own changes.
+- [ ] Executable permissions (`+x`) are set on new shell scripts via Git.
 - [ ] I have updated relevant documentation if necessary.
