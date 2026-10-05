@@ -58,15 +58,15 @@ start_xidlehook() {
 
     # Single Profile Idle Handling:
     # Timer 1 (5 minutes / 300s)  : Lock screen via betterlockscreen
-    # Timer 2 (15 minutes / 900s) : Turn off display power (DPMS Off)
-    # Timer 3 (30 minutes / 1800s): Suspend the system
+    # Timer 2 (15 minutes / 600s) : Turn off display power (DPMS Off)
+    # Timer 3 (30 minutes / 900s): Suspend the system
     xidlehook \
         --detect-sleep \
         --not-when-audio \
         --not-when-fullscreen \
         --timer 300 "$LOCK_CMD" '' \
-        --timer 900 'xset dpms force off' '' \
-        --timer 1800 'systemctl suspend' '' &
+        --timer 600 'xset dpms force off' '' \
+        --timer 900 'systemctl suspend' '' &
 
     local -r idlehook_pid=$!
     log "INFO" "xidlehook running with PID: ${idlehook_pid}."
