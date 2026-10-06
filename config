@@ -9,8 +9,11 @@
 # The modifier key used throughout every keybinding. Set here (rather than
 # inside config.d/) because nearly every included file depends on it, and
 # i3 requires a variable to be defined before it is used (§4.1, §4.16).
+set $alt Mod1
 set $mod Mod4
 set $term kitty
+set $browser zen-browser
+set $filemanager pcmanfm-qt
 
 set $bg       #282a36
 set $cl       #44475a
