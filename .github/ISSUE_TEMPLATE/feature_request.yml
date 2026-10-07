@@ -1,0 +1,40 @@
+name: Feature Request
+description: Suggest an idea or new feature for this repository
+title: "[FEAT]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement / Need
+      description: A clear and concise description of the problem, limitation, or feature requirement.
+      placeholder: Currently, window animations are missing and screen tearing occurs during video playback...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution or Desired Outcome
+      description: Describe how you envision the feature working, or state what end result you want to achieve if you are unsure about the technical implementation.
+      placeholder: Add Picom configuration with GLX backend, or recommend a setup to eliminate screen tearing...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: components
+    attributes:
+      label: Affected Components
+      options:
+        - label: Picom Compositor
+        - label: Dunst Notification Daemon
+        - label: Polybar Status Bar
+        - label: Core i3 Window Manager
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add screenshots, terminal outputs, or reference dotfiles here.
+    validations:
+      required: false
