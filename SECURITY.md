@@ -20,6 +20,7 @@ If you discover a potential security vulnerability (such as exposed hardcoded se
 3. Include detailed steps to reproduce the issue, along with any relevant proof-of-concept scripts or logs.
 
 ### Response Timeline
+
 - **Acknowledgement:** Within 48 hours of receiving the report.
 - **Assessment & Fix:** Aimed to be patched within 7–14 days depending on the severity.
 
