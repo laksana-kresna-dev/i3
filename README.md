@@ -54,28 +54,83 @@ Arch install.
    i3-msg restart
    ```
 
-## Keybindings
+## Keybindings Reference
 
-The modifier key (`$mod`) is set to the **Windows/Super key** (`Mod4`).
+<details>
+<summary><strong>Complete Keybindings Cheat Sheet (Modifier = $mod / Super)</strong></summary>
 
-| Keybinding           | Action                                   |
-| -------------------- | ---------------------------------------- |
-| `$mod+Return`        | Open a terminal                          |
-| `$mod+Shift+q`       | Kill focused window                      |
-| `$mod+d`             | Open dmenu launcher                      |
-| `$mod+j/k/l/;`       | Move focus left/down/up/right            |
-| `$mod+Shift+j/k/l/;` | Move focused window                      |
-| `$mod+h` / `$mod+v`  | Split horizontal / vertical              |
-| `$mod+f`             | Toggle fullscreen                        |
-| `$mod+s/w/e`         | Layout: stacking / tabbed / toggle split |
-| `$mod+Shift+space`   | Toggle floating                          |
-| `$mod+1`–`$mod+0`    | Switch workspace                         |
-| `$mod+Shift+1`–`0`   | Move window to workspace                 |
-| `$mod+r`             | Enter resize mode                        |
-| `$mod+Shift+r`       | Restart i3                               |
-| `$mod+Shift+e`       | Exit i3                                  |
+<br>
 
-Full reference: [i3 User's Guide](https://i3wm.org/docs/userguide.html)
+### Applications & Launchers
+
+| Keybinding              | Action                                         |
+| :---------------------- | :--------------------------------------------- |
+| `$mod + Return`         | Open terminal (`kitty`)                        |
+| `$mod + Shift + Return` | Open floating terminal                         |
+| `$mod + d`              | Open `dmenu` application launcher              |
+| `$mod + b`              | Launch web browser                             |
+| `$mod + f`              | Open terminal file manager (`ranger`)          |
+| `$mod + Shift + f`      | Open GUI file manager                          |
+| `$mod + v`              | Open terminal volume mixer (`pulsemixer`)      |
+| `$mod + Shift + v`      | Open PulseAudio volume control (`pavucontrol`) |
+
+### Window Management
+
+| Keybinding                            | Action                                                  |
+| :------------------------------------ | :------------------------------------------------------ |
+| `$mod + x`                            | Kill focused window                                     |
+| `$mod + Shift + x`                    | Select window to kill (`xkill`)                         |
+| `$mod + [h/j/k/l]` / `Arrows`         | Move focus (left / down / up / right)                   |
+| `$mod + Shift + [h/j/k/l]` / `Arrows` | Move focused window                                     |
+| `$mod + s`                            | Toggle container split (horizontal / vertical)          |
+| `$mod + Ctrl + f`                     | Toggle fullscreen                                       |
+| `$mod + w`                            | Set tabbed layout                                       |
+| `$mod + e`                            | Toggle split layout                                     |
+| `$mod + Shift + Space`                | Toggle floating mode                                    |
+| `$mod + Ctrl + Space`                 | Toggle sticky window (visible across all workspaces)    |
+| `$mod + Space`                        | Toggle focus between tiling and floating windows        |
+| `$mod + a`                            | Focus parent container                                  |
+| `$mod + r`                            | Enter resize mode (`Return` / `Esc` / `$mod+r` to exit) |
+
+### Workspaces & Navigation
+
+| Keybinding                        | Action                                            |
+| :-------------------------------- | :------------------------------------------------ |
+| `$mod + [1..0]`                   | Switch to workspace 1–10                          |
+| `$mod + Shift + [1..0]`           | Move focused window to workspace 1–10             |
+| `$mod + PageUp` / `PageDown`      | Switch to previous / next workspace               |
+| `$mod + Tab`                      | Toggle between current and last focused workspace |
+| `$mod + Shift + Tab`              | Move window to last focused workspace             |
+| `Alt + Tab` / `Alt + Shift + Tab` | Focus next / previous window in current workspace |
+
+### Media, Audio & Brightness
+
+| Keybinding                                    | Action                                         |
+| :-------------------------------------------- | :--------------------------------------------- |
+| `XF86AudioRaiseVolume` / `LowerVolume`        | Raise / lower system volume                    |
+| `XF86AudioMute`                               | Toggle audio mute                              |
+| `$mod + XF86AudioRaiseVolume` / `LowerVolume` | Raise / lower microphone volume                |
+| `$mod + XF86AudioMute`                        | Toggle microphone mute                         |
+| `XF86AudioPlay` / `Next` / `Prev`             | Media play-pause / next track / previous track |
+| `XF86MonBrightnessUp` / `Down`                | Increase / decrease screen brightness          |
+
+### Screenshots
+
+| Keybinding      | Action                        |
+| :-------------- | :---------------------------- |
+| `Print`         | Capture full screen (`scrot`) |
+| `Shift + Print` | Capture focused window        |
+| `Ctrl + Print`  | Capture selected area         |
+
+### Session Control
+
+| Keybinding         | Action                                     |
+| :----------------- | :----------------------------------------- |
+| `$mod + Shift + c` | Reload i3 configuration                    |
+| `$mod + Shift + r` | Restart i3 in-place                        |
+| `$mod + Shift + e` | Exit i3 session (with confirmation prompt) |
+
+</details>
 
 ## Contributing
 
