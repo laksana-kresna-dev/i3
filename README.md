@@ -34,40 +34,27 @@ Arch install.
 - **Dunst Notification Daemon:** Lightweight notification system customized with urgency-based color schemes, tailored display timeouts, and hotkey controls for dismissing and reviewing notification history.
 - **Rofi & dmenu Launchers:** Dual-purpose workflow execution—Rofi as an interactive launcher and window switcher, with `dmenu` serving as a lightweight fallback for quick command execution.
 
-<details>
-<summary><strong>Installation</strong></summary>
+## Quick Start & Installation
 
-<br>
-
-1. Set your GitHub username once (skip if already set):
+1. Backup Existing Configuration:
 
    ```sh
-   git config --global github.user "your-github-username"
+   [ -d ~/.config/i3 ] && mv ~/.config/i3 ~/.config/i3.bak-$(date +%Y%m%d%H%M%S)
    ```
 
 2. Clone this repository directly into `~/.config/i3`:
 
    ```sh
-   git clone git@github.com:$(git config --get github.user)/i3wm-dotfiles.git ~/.config/i3
+   git clone [https://github.com/laksana-kresna-dev/i3.git](https://github.com/laksana-kresna-dev/i3.git) ~/.config/i3
    ```
 
-3. Back up your existing i3 config, if any:
+3. Restart i3 in-place via $mod+Shift+r or terminal:
 
    ```sh
-   mv ~/.config/i3/config ~/.config/i3/config.bak
+   i3-msg restart
    ```
 
-4. Reload i3 (`$mod+Shift+c`) or restart it (`$mod+Shift+r`).
-
-**Requirements:** i3, i3status, i3lock, xss-lock, dex, nm-applet, dmenu,
-PulseAudio (`pactl`).
-
-</details>
-
-<details>
-<summary><strong>Keybindings</strong></summary>
-
-<br>
+## Keybindings
 
 The modifier key (`$mod`) is set to the **Windows/Super key** (`Mod4`).
 
@@ -89,8 +76,6 @@ The modifier key (`$mod`) is set to the **Windows/Super key** (`Mod4`).
 | `$mod+Shift+e`       | Exit i3                                  |
 
 Full reference: [i3 User's Guide](https://i3wm.org/docs/userguide.html)
-
-</details>
 
 ## Contributing
 
