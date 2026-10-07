@@ -6,6 +6,11 @@ on:
     paths:
       - "**.sh"
       - "**/bin/*"
+  pull_request:
+    branches: [main]
+    paths:
+      - "**.sh"
+      - "**/bin/*"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
