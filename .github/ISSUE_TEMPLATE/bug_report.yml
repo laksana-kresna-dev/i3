@@ -1,0 +1,63 @@
+name: Bug Report
+description: Create a report to help us reproduce and fix a bug
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Dunst notifications fail to render when triggered via keybinding...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Explain how to reproduce the issue step-by-step.
+      placeholder: |
+        1. Reload i3 configuration using `$mod+Shift+r`
+        2. Execute `notify-send "Test"` in the terminal
+        3. Observe the notification failure
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: A clear description of what you expected to happen.
+      placeholder: A styled notification banner should appear at the top-right corner.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Actual Behavior & Error Logs
+      description: Paste terminal output, error logs, or process crashes here.
+      placeholder: "dunst: error while loading shared libraries..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Operating System / Distribution
+      options:
+        - Arch Linux
+        - Ubuntu / Debian
+        - Fedora
+        - Other Linux Distribution
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Media
+      description: Drag and drop screenshots or screen recordings demonstrating the issue.
+    validations:
+      required: false
