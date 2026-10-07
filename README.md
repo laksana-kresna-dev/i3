@@ -1,8 +1,13 @@
 # I3 Window Manager
 
+[![CI Pipeline](https://github.com/laksana-kresna-dev/i3/actions/workflows/ci.yml/badge.svg)](https://github.com/laksana-kresna-dev/i3/actions/workflows/ci.yml)
+[![Release Please](https://github.com/laksana-kresna-dev/i3/actions/workflows/release.yml/badge.svg)](https://github.com/laksana-kresna-dev/i3/actions/workflows/release.yml)
+[![Version](https://img.shields.io/github/v/release/laksana-kresna-dev/i3?sort=semver)](https://github.com/laksana-kresna-dev/i3/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 > My personal i3 window manager rice, running on Arch Linux.
 
-![preview](./screenshots/desktop.png)
+![Desktop Showcase](./screenshots/desktop.png)
 
 ## Overview
 
@@ -11,22 +16,23 @@ keyboard-driven, and configured entirely from a plain text file. This
 repository also doubles as a quick way to restore my setup on a fresh
 Arch install.
 
-## Highlights
+## Architecture & Tech Stack
 
-- Fully keyboard-driven workflow, no mouse required for window management
-- Clean, minimal visual style with no title bars
-- Themed i3bar as the status bar
-- Single, well-commented config file — easy to read top to bottom
+| Domain                   | Technology / Tool               |
+| :----------------------- | :------------------------------ |
+| **Window Manager**       | i3-wm                           |
+| **Compositor**           | Picom (GLX Backend, Animations) |
+| **Status Bar**           | Polybar                         |
+| **Notification Daemon**  | Dunst                           |
+| **Application Launcher** | Rofi / dmenu                    |
 
-## Tech stack
+## Component Highlights
 
-| Component      | Tool              |
-| -------------- | ----------------- |
-| Window manager | i3                |
-| Status bar     | i3bar + i3status  |
-| Launcher       | dmenu             |
-| Screen locking | i3lock + xss-lock |
-| OS             | Arch Linux        |
+- **i3 Window Manager:** Minimalist tiling desktop setup configured with intuitive `$mod`-key navigation, automated workspace assignments, dynamic splitting, and zero window decoration bloat.
+- **Picom Compositor:** Hardware-accelerated GLX backend providing screen-tearing elimination, subtle window fade effects, rounded corners, and customizable opacity rules.
+- **Polybar Status Bar:** Modern, modular status bar showcasing real-time system metrics (CPU, memory, storage, network interface status), active workspace indicators, and system tray integration.
+- **Dunst Notification Daemon:** Lightweight notification system customized with urgency-based color schemes, tailored display timeouts, and hotkey controls for dismissing and reviewing notification history.
+- **Rofi & dmenu Launchers:** Dual-purpose workflow execution—Rofi as an interactive launcher and window switcher, with `dmenu` serving as a lightweight fallback for quick command execution.
 
 <details>
 <summary><strong>Installation</strong></summary>
@@ -86,11 +92,14 @@ Full reference: [i3 User's Guide](https://i3wm.org/docs/userguide.html)
 
 </details>
 
-## Status
+## Contributing
 
-Work in progress — actively refining this setup. Check the commit history
-for the latest changes.
+Contributions are welcome! Please adhere to the following guidelines:
+
+- **Issue Reporting:** Submit bug reports or feature requests using the structured **[Issue Forms](.github/ISSUE_TEMPLATE/)**.
+- **Pull Requests:** Ensure all PRs follow the guidelines and verification checklists in the **[PR Template](.github/PULL_REQUEST_TEMPLATE.md)**.
+- **Commit Standards:** Follow [Conventional Commits](https://www.conventionalcommits.org/) (`feat:`, `fix:`, `chore:`, `docs:`) to enable automated semantic releases and changelog updates.
 
 ## License
 
-[MIT](./LICENSE)
+Distributed under the [MIT License](./LICENSE). See `LICENSE` for more information.
