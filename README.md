@@ -1,4 +1,5 @@
 # I3 Window Manager
+
 > My personal i3 window manager rice, running on Arch Linux.
 
 ![preview](./screenshots/desktop.png)
@@ -19,13 +20,13 @@ Arch install.
 
 ## Tech stack
 
-| Component      | Tool          |
-| --------------- | -------------- |
-| Window manager  | i3              |
-| Status bar      | i3bar + i3status |
-| Launcher        | dmenu           |
-| Screen locking  | i3lock + xss-lock |
-| OS              | Arch Linux      |
+| Component      | Tool              |
+| -------------- | ----------------- |
+| Window manager | i3                |
+| Status bar     | i3bar + i3status  |
+| Launcher       | dmenu             |
+| Screen locking | i3lock + xss-lock |
+| OS             | Arch Linux        |
 
 <details>
 <summary><strong>Installation</strong></summary>
@@ -64,22 +65,22 @@ PulseAudio (`pactl`).
 
 The modifier key (`$mod`) is set to the **Windows/Super key** (`Mod4`).
 
-| Keybinding            | Action                                    |
-| ---------------------- | ------------------------------------------ |
-| `$mod+Return`          | Open a terminal                            |
-| `$mod+Shift+q`         | Kill focused window                        |
-| `$mod+d`                | Open dmenu launcher                        |
-| `$mod+j/k/l/;`          | Move focus left/down/up/right              |
-| `$mod+Shift+j/k/l/;`    | Move focused window                        |
-| `$mod+h` / `$mod+v`     | Split horizontal / vertical                |
-| `$mod+f`                | Toggle fullscreen                          |
-| `$mod+s/w/e`            | Layout: stacking / tabbed / toggle split   |
-| `$mod+Shift+space`      | Toggle floating                            |
-| `$mod+1`–`$mod+0`       | Switch workspace                           |
-| `$mod+Shift+1`–`0`      | Move window to workspace                   |
-| `$mod+r`                | Enter resize mode                          |
-| `$mod+Shift+r`          | Restart i3                                 |
-| `$mod+Shift+e`          | Exit i3                                    |
+| Keybinding           | Action                                   |
+| -------------------- | ---------------------------------------- |
+| `$mod+Return`        | Open a terminal                          |
+| `$mod+Shift+q`       | Kill focused window                      |
+| `$mod+d`             | Open dmenu launcher                      |
+| `$mod+j/k/l/;`       | Move focus left/down/up/right            |
+| `$mod+Shift+j/k/l/;` | Move focused window                      |
+| `$mod+h` / `$mod+v`  | Split horizontal / vertical              |
+| `$mod+f`             | Toggle fullscreen                        |
+| `$mod+s/w/e`         | Layout: stacking / tabbed / toggle split |
+| `$mod+Shift+space`   | Toggle floating                          |
+| `$mod+1`–`$mod+0`    | Switch workspace                         |
+| `$mod+Shift+1`–`0`   | Move window to workspace                 |
+| `$mod+r`             | Enter resize mode                        |
+| `$mod+Shift+r`       | Restart i3                               |
+| `$mod+Shift+e`       | Exit i3                                  |
 
 Full reference: [i3 User's Guide](https://i3wm.org/docs/userguide.html)
 
