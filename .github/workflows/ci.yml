@@ -1,0 +1,62 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main, master, development]
+  pull_request:
+    branches: [main, master, development]
+
+jobs:
+  shellcheck:
+    name: Shell Script Linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master
+        with:
+          ignore_paths: node_modules
+        continue-on-error: true
+
+  config-syntax-check:
+    name: Validate Dotfiles Syntax
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Picom and Dunst
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y picom dunst xvfb
+
+      - name: Check Picom Config Syntax
+        run: |
+          if [ -f "picom.conf" ] || [ -f "picom/picom.conf" ]; then
+            CONFIG_PATH=$(test -f "picom.conf" && echo "picom.conf" || echo "picom/picom.conf")
+            xvfb-run picom --config "$CONFIG_PATH" --dry-run
+          else
+            echo "Picom config not found, skipping."
+          fi
+
+      - name: Check Dunst Config Syntax
+        run: |
+          if [ -f "dunstrc" ] || [ -f "dunst/dunstrc" ]; then
+            echo "Dunst config found."
+          else
+            echo "Dunst config not found, skipping."
+          fi
+
+  markdown-lint:
+    name: Markdown Linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run markdownlint
+        uses: davidanson/markdownlint-cli2-action@v16
+        with:
+          globs: "**/*.md"
