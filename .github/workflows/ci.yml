@@ -59,4 +59,5 @@ jobs:
       - name: Run markdownlint
         uses: davidanson/markdownlint-cli2-action@v16
         with:
+          config: ".markdownlint-cli2.jsonc"
           globs: "**/*.md"
