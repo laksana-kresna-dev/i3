@@ -15,21 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup ShellCheck
-        run: sudo apt-get update && sudo apt-get install -y shellcheck
-
-      - name: Find and check syntax of all .sh files
-        run: |
-          echo "Running bash syntax check..."
-          find . -name "*.sh" -type f | while read -r file; do
-            echo "Checking syntax: $file"
-            bash -n "$file"
-          done
-
       - name: Run ShellCheck
-        run: |
-          echo "Running ShellCheck analysis..."
-          find . -name "*.sh" -type f | while read -r file; do
-            echo "Linting: $file"
-            shellcheck "$file"
-          done
+        uses: ludeeus/action-shellcheck@2.0.0
+        with:
+          scandir: "."
