@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/laksana-kresna-dev/i3/compare/v1.1.1...v1.2.0) (2026-10-19)
+
+
+### Features
+
+* **picom:** add modular picom config with i3-frame window rules ([635e767](https://github.com/laksana-kresna-dev/i3/commit/635e767eacea0797e8981c4aef8f41b5f361f992))
+
 ## [1.1.1](https://github.com/laksana-kresna-dev/i3/compare/v1.1.0...v1.1.1) (2026-10-07)
 
 
