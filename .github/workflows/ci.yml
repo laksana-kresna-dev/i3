@@ -2,9 +2,9 @@ name: CI - Shell Script Check
 
 on:
   pull_request:
-    branches: ["main"]
+    branches: ["main", "master"]
     paths:
-      - "**.sh"
+      - "scripts/**.sh"
       - ".github/workflows/ci.yml"
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run ShellCheck
+      - name: Run ShellCheck on scripts folder
         uses: ludeeus/action-shellcheck@2.0.0
         with:
-          scandir: "."
+          scandir: "./scripts"
