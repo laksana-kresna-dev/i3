@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/laksana-kresna-dev/i3/compare/v1.2.0...v1.3.0) (2026-10-20)
+
+
+### Features
+
+* **dunst:** add modular dunst configuration ([cc875ec](https://github.com/laksana-kresna-dev/i3/commit/cc875ec21f347cd3259c55954ba4c91c153086fb))
+
 ## [1.2.0](https://github.com/laksana-kresna-dev/i3/compare/v1.1.1...v1.2.0) (2026-10-19)
 
 
