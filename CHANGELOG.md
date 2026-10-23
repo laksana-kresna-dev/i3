@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/laksana-kresna-dev/i3/compare/v1.3.0...v1.3.1) (2026-10-23)
+
+
+### Bug Fixes
+
+* **i3status:** adjusting the max_threshold parameter ([77b673f](https://github.com/laksana-kresna-dev/i3/commit/77b673fed5f349bff43853561b79703c674456ce))
+
 ## [1.3.0](https://github.com/laksana-kresna-dev/i3/compare/v1.2.0...v1.3.0) (2026-10-20)
 
 
