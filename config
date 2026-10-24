@@ -32,4 +32,4 @@ include config.d/10-startup.conf
 include config.d/20-workspaces.conf
 include config.d/30-bindings.conf
 include config.d/40-rules.conf
-include config.d/50-bar.conf
+#include config.d/50-bar.conf
