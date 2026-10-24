@@ -6,7 +6,7 @@ polybar-msg cmd quit
 # Otherwise you can use the nuclear option:
 # killall -q polybar
 
-# Launch bar1 and bar2
+# Launch polybar
 echo "---" | tee -a /tmp/polybar.log
 polybar -c $HOME/.config/i3/modules/polybar/config.ini i3bar 2>&1 | tee -a /tmp/polybar.log & disown
 
