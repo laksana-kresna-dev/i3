@@ -13,7 +13,7 @@ set $alt Mod1
 set $mod Mod4
 set $term kitty
 set $browser zen-browser
-set $filemanager pcmanfm-qt
+set $filemanager nemo
 
 set $bg       #282a36
 set $cl       #44475a
