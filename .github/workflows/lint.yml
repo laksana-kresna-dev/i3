@@ -1,0 +1,38 @@
+name: Dotfiles CI Lint
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  lint-configs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Lint Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y i3 shellcheck xvfb
+
+      - name: Validate i3 Configuration
+        run: |
+          # Dynamically locate the i3 config file within the repository
+          CONFIG_FILE=$(find . -maxdepth 3 -type f -name "config" -not -path "*/.git/*" | head -n 1)
+
+          if [ -n "$CONFIG_FILE" ]; then
+            echo "Found i3 configuration file at: $CONFIG_FILE"
+            # Use xvfb-run to provide a virtual display for i3 -C syntax checking
+            xvfb-run i3 -C -c "$CONFIG_FILE"
+          else
+            echo "ERROR: i3 configuration file not found in repository."
+            exit 1
+          fi
+
+      - name: Run ShellCheck on Shell Scripts
+        run: |
+          # Scan and validate all shell scripts inside the repository
+          find . -type f \( -name "*.sh" -o -path "*/bin/*" \) -not -path "*/.git/*" -exec shellcheck {} +
