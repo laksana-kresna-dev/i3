@@ -1,0 +1,30 @@
+name: Dotfiles CI Lint
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  lint-configs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Lint Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y i3 shellcheck
+
+      - name: Validate i3 Configuration
+        run: |
+          if [ -f ".config/i3/config" ]; then
+            i3 -C -c .config/i3/config
+          elif [ -f "i3/config" ]; then
+            i3 -C -c i3/config
+
+      - name: Run ShellCheck on Shell Scripts
+        run: |
+          find . -type f \( -name "*.sh" -o -path "*/bin/*" \) -not -path "*/.git/*" -exec shellcheck {} +
