@@ -1,5 +1,6 @@
 # I3 Window Manager
 
+[![Dotfiles CI Lint](https://github.com/laksana-kresna-dev/i3/actions/workflows/lint.yml/badge.svg)](https://github.com/laksana-kresna-dev/i3/actions/workflows/lint.yml)
 [![Release Please](https://github.com/laksana-kresna-dev/i3/actions/workflows/release.yml/badge.svg)](https://github.com/laksana-kresna-dev/i3/actions/workflows/release.yml)
 [![Version](https://img.shields.io/github/v/release/laksana-kresna-dev/i3?sort=semver)](https://github.com/laksana-kresna-dev/i3/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
