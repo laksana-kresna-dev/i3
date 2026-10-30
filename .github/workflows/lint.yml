@@ -24,6 +24,9 @@ jobs:
             i3 -C -c .config/i3/config
           elif [ -f "i3/config" ]; then
             i3 -C -c i3/config
+          else
+            exit 1
+          fi
 
       - name: Run ShellCheck on Shell Scripts
         run: |
